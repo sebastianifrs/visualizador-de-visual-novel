@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+header {
+    width: 100%;
+    min-height: 88px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.titulo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.imagem-header {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 15%;
+    flex-shrink: 0;
+    pointer-events: none;
+}
+
+.textoTitulo-header {
+    margin: 0;
+    font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+    line-height: 1.15;
+    cursor: default;
+}
+
+.nav-header {
+    flex-shrink: 0;
+}
+
+.nav-header ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-header a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-header a:hover,
+.nav-header a:focus-visible {
+    color: rgba(0, 128, 0, 0.75);
+    border-bottom-color: rgba(0, 128, 0, 0.5);
+}
+
+.nav-header li:first-child a:hover {
+    color: rgba(128, 0, 0, 0.75);
+    border-bottom-color: rgba(128, 0, 0, 0.5);
+}
+
+.nav-header li:last-child a:hover {
+    color: rgba(0, 0, 128, 0.75);
+    border-bottom-color: rgba(0, 0, 128, 0.5);
+}
+
+.hr-sobheader {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* Em telas menores, os links passam para uma linha abaixo do título */
+@media (max-width: 760px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 5%;
+    }
+
+    .titulo-header,
+    .nav-header {
+        width: 100%;
+    }
+
+    .imagem-header {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nav-header ul {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .nav-header a {
+        padding: 8px 10px;
+    }
+}
+
+/* Ajustes para celulares estreitos */
+@media (max-width: 380px) {
+    .textoTitulo-header {
+        font-size: 1.05rem;
+    }
+
+    .nav-header ul {
+        gap: 0;
+    }
+
+    .nav-header a {
+        padding: 8px;
+        font-size: 15px;
+    }
+}
+
+/* Main */
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* Container das quatro imagens */
+.ultimasAnalises > div {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Cada imagem */
+.ultimasAnalises > div > div {
+    min-width: 0;
+}
+
+.ultimasAnalises img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 760px) {
+    .ultimasAnalises > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+.ultimasAnalises > div > a {
+    text-decoration: none;    
+    color: black;
+}
+
+.ultimasAnalises > div > a:hover {
+    text-decoration: none;    
+    color: rgba(0, 0, 255, 0.6);
+}
+
+
+.melhoresVN > div {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Cada imagem */
+.melhoresVN > div > div {
+    min-width: 0;
+}
+
+.melhoresVN img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Celulares: duas colunas e duas linhas */
+@media (max-width: 760px) {
+    .melhoresVN > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+.melhoresVN > div > a {
+    text-decoration: none;    
+    color: black;
+}
+
+.melhoresVN > div > a:hover {
+    text-decoration: none;    
+    color: rgba(0, 0, 255, 0.6);
+}
+
+
+.parceiros > div {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+/* Cada imagem */
+.parceiros > div > div {
+    min-width: 0;
+}
+
+.parceiros img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Celulares: duas colunas e duas linhas */
+@media (max-width: 760px) {
+    .parceiros > div {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+.parceiros > div > a{
+    text-decoration: none;    
+    color: black;
+}
+
+
+.parceiros > div > a:first-child:hover{
+    text-decoration: none;    
+    color: rgba(255, 0, 0, 0.6);
+}
+
+.parceiros > div > a:last-child:hover{
+    text-decoration: none;    
+    color: rgba(0, 255, 0, 0.6);
+}
