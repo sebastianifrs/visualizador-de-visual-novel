@@ -1,0 +1,60 @@
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 5%;
+}
+
+/* Formulário */
+#formContato {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.campo-form textarea {
+    resize: vertical;
+}
+
+#formContato button {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 12px 0;
+    text-align: center;
+}
