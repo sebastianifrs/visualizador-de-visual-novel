@@ -91,7 +91,7 @@ header {
     margin: 0;
 }
 
-/* Em telas menores, os links passam para uma linha abaixo do título */
+/* Responsabvidade para telas menores*/
 @media (max-width: 760px) {
     header {
         align-items: flex-start;
@@ -120,7 +120,7 @@ header {
     }
 }
 
-/* Ajustes para celulares estreitos */
+/* Telas menores ainda */
 @media (max-width: 380px) {
     .textoTitulo-header {
         font-size: 1.05rem;
@@ -144,49 +144,62 @@ main {
 }
 
 
-/* Container das quatro imagens */
-.ultimasAnalises > div {
+
+/* Cards dp index e da página de análises*/
+.ultimasAnalises > div,
+.melhoresVN > div,
+#catalogo-container {
+
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
     padding: 16px;
 }
 
-/* Cada imagem */
-.ultimasAnalises > div > div {
-    min-width: 0;
-}
 
-.ultimasAnalises img {
+/* Cada card */
+.ultimasAnalises > div > a,
+.melhoresVN > div > a,
+#catalogo-container > a {
+
     display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-@media (max-width: 760px) {
-    .ultimasAnalises > div {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-}
-
-.ultimasAnalises > div > a {
-    text-decoration: none;    
+    min-width: 0;
+    text-decoration: none;
     color: black;
 }
 
-.ultimasAnalises > div > a:hover {
-    text-decoration: none;    
+
+.ultimasAnalises img,
+.melhoresVN img,
+#catalogo-container img {
+
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.ultimasAnalises > div > a:hover,
+.melhoresVN > div > a:hover,
+#catalogo-container > a:hover {
+
     color: rgba(0, 0, 255, 0.6);
 }
 
 
-.melhoresVN > div {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
-    padding: 16px;
+/* repetir 2 em telas pequenas */
+
+@media (max-width: 760px) {
+
+    .ultimasAnalises > div,
+    .melhoresVN > div,
+    #catalogo-container {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
 }
 
 /* Cada imagem */
@@ -198,24 +211,7 @@ main {
     display: block;
     width: 100%;
     height: auto;
-}
-
-/* Celulares: duas colunas e duas linhas */
-@media (max-width: 760px) {
-    .melhoresVN > div {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-}
-
-.melhoresVN > div > a {
-    text-decoration: none;    
-    color: black;
-}
-
-.melhoresVN > div > a:hover {
-    text-decoration: none;    
-    color: rgba(0, 0, 255, 0.6);
+    border-radius: 5px;
 }
 
 

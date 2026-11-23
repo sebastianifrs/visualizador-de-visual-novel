@@ -7,6 +7,7 @@
     <title>Análises - Visualizador de Visual Novels</title>
     <link rel="shortcut icon" href="../image/icovvn.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/analises.css">
 </head>
 <body>
     <header>
@@ -24,5 +25,64 @@
         </nav>
     </header>
     <hr class="hr-sobheader">
+
+    <main>
+
+    <!-- Filtros -->
+        <section class="filtros">
+            <h2>Filtrar Visual Novels</h2>
+
+            <div class="filtro-genero">
+                <h3>Gênero</h3>
+                <div id="generos-container"></div>
+            </div>
+
+            <div class="filtro-letra">
+                <h3>Letra inicial</h3>
+                <div id="letras-container"></div>
+            </div>
+
+            <div class="filtro-estudio">
+                <h3>Estúdio</h3>
+                <div id="estudios-container"></div>
+            </div>
+
+            <div class="filtro-adulto">
+                <h3>Conteúdo adulto</h3>
+
+                <label> <input type="radio" name="adulto" value="todos" checked>Todos </label>
+                <label> <input type="radio" name="adulto" value="sim">Sim </label>
+                <label> <input type="radio" name="adulto" value="nao">Não </label>
+            </div>
+
+            <button type="button" id="aplicar-filtros" onclick="aplicarFiltros()">Aplicar filtros</button>
+
+        </section>
+
+
+
+
+        <!-- Catálogo -->
+        <section class="catalogo">
+            <h2>Visual Novels</h2>
+
+            <div id="catalogo-container">
+                <!-- JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <hr class="hr-sobheader">
+    <footer>
+        <center>
+            <p>© Sebastian MM' Hoff 2026</p>
+        </center>
+    </footer> <!--Colocar o o copyright-->
+
+    <script src="../script/visualnovels.js"></script>
+    <script src="../script/analises.js"></script>
+    <script src="../script/script.js"></script>
 </body>
 </html>
