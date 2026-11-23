@@ -1,105 +1,257 @@
-html, body{
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0px; 
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
 }
 
 
-header{
-    position: absolute;
-    top: 0px;
-    left: 0px;
+header {
     width: 100%;
-    height: 64px;
+    min-height: 88px;
+    padding: 12px 5%;
     display: flex;
-    padding-bottom: 12px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
 }
 
-.imagem-header{
+.titulo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.imagem-header {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
     border-radius: 15%;
-    transform: translate(0%, +10%);
+    flex-shrink: 0;
     pointer-events: none;
 }
 
-.titulo-header{
+.textoTitulo-header {
+    margin: 0;
+    font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+    line-height: 1.15;
+    cursor: default;
+}
+
+.nav-header {
+    flex-shrink: 0;
+}
+
+.nav-header ul {
     display: flex;
-    position: absolute;
-    left: 7.5%;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE10+/Edge */
-    user-select: none;      /* Resto*/
-}
-
-.textoTitulo-header{
-    padding-left: 8px;
-    cursor:default
-}
-
-.hr-sobheader{
-    color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 72px;
-    width: 100%;
-}
-
-.nav-header{
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-.nav-header ul{
-    padding: 0px;
-    margin: 0 auto;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
     list-style: none;
-    text-align: center;
 }
 
-.nav-header ul li{
-    display: inline;
-}
-
-.nav-header ul li a{
-    padding: 10px 10px;
-    display: inline-block;
-
+.nav-header a {
+    display: block;
+    padding: 10px;
     color: black;
     text-decoration: none;
-    border-bottom: 2px;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.nav-header ul li a:hover{
-    padding: 10px 10px;
-    display: inline-block;
-
-    color: rgba(0, 128, 0, 0.5);
-    text-decoration: none;
-    border-bottom: 2px solid rgba(0, 128, 0, 0.5);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+.nav-header a:hover,
+.nav-header a:focus-visible {
+    color: rgba(0, 128, 0, 0.75);
+    border-bottom-color: rgba(0, 128, 0, 0.5);
 }
 
-.nav-header ul li:first-child a:hover{
-    padding: 10px 10px;
-    display: inline-block;
-
-    color: rgba(128, 0, 0, 0.5);
-    text-decoration: none;
-    border-bottom: 2px solid rgba(128, 0, 0, 0.5);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+.nav-header li:first-child a:hover {
+    color: rgba(128, 0, 0, 0.75);
+    border-bottom-color: rgba(128, 0, 0, 0.5);
 }
 
-.nav-header ul li:last-child a:hover{
-    padding: 10px 10px;
-    display: inline-block;
+.nav-header li:last-child a:hover {
+    color: rgba(0, 0, 128, 0.75);
+    border-bottom-color: rgba(0, 0, 128, 0.5);
+}
 
-    color: rgba(0, 0, 128, 0.5);
+.hr-sobheader {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* Responsabvidade para telas menores*/
+@media (max-width: 760px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 5%;
+    }
+
+    .titulo-header,
+    .nav-header {
+        width: 100%;
+    }
+
+    .imagem-header {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nav-header ul {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .nav-header a {
+        padding: 8px 10px;
+    }
+}
+
+/* Telas menores ainda */
+@media (max-width: 380px) {
+    .textoTitulo-header {
+        font-size: 1.05rem;
+    }
+
+    .nav-header ul {
+        gap: 0;
+    }
+
+    .nav-header a {
+        padding: 8px;
+        font-size: 15px;
+    }
+}
+
+/* Main */
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* Cards dp index e da página de análises*/
+.ultimasAnalises > div,
+.melhoresVN > div,
+#catalogo-container {
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+
+/* Cada card */
+.ultimasAnalises > div > a,
+.melhoresVN > div > a,
+#catalogo-container > a {
+
+    display: block;
+    min-width: 0;
     text-decoration: none;
-    border-bottom: 2px solid rgba(0, 0, 128, 0.5);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    color: black;
+}
+
+
+.ultimasAnalises img,
+.melhoresVN img,
+#catalogo-container img {
+
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.ultimasAnalises > div > a:hover,
+.melhoresVN > div > a:hover,
+#catalogo-container > a:hover {
+
+    color: rgba(0, 0, 255, 0.6);
+}
+
+
+/* repetir 2 em telas pequenas */
+
+@media (max-width: 760px) {
+
+    .ultimasAnalises > div,
+    .melhoresVN > div,
+    #catalogo-container {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+}
+
+/* Cada imagem */
+.melhoresVN > div > div {
+    min-width: 0;
+}
+
+.melhoresVN img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.parceiros > div {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+/* Cada imagem */
+.parceiros > div > div {
+    min-width: 0;
+}
+
+.parceiros img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Celulares: duas colunas e duas linhas */
+@media (max-width: 760px) {
+    .parceiros > div {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+.parceiros > div > a{
+    text-decoration: none;    
+    color: black;
+}
+
+
+.parceiros > div > a:first-child:hover{
+    text-decoration: none;    
+    color: rgba(255, 0, 0, 0.6);
+}
+
+.parceiros > div > a:last-child:hover{
+    text-decoration: none;    
+    color: rgba(0, 255, 0, 0.6);
 }
