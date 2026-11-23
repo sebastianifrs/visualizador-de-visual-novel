@@ -1,0 +1,125 @@
+/*Filtros do catálogo*/
+.filtros {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    padding: 20px;
+    margin: 24px 0;
+}
+
+
+.filtros h2 {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+
+.filtros > div {
+    padding: 14px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.filtros h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+#generos-container,
+#estudios-container,
+#letras-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filtros label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 6px 9px;
+
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.filtros label:hover {
+    background-color: #e5e5e5;
+}
+
+/* Checkboxes e radios */
+
+.filtros input {
+    margin: 0;
+    accent-color: #444;
+    cursor: pointer;
+}
+
+/* Conteúdo adulto */
+
+.filtro-adulto {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 8px;
+}
+
+.filtro-adulto h3 {
+    width: 100%;
+}
+
+/* Botao para aplicar filtro */
+
+#aplicar-filtros {
+    grid-column: 1 / -1;
+    justify-self: start;
+
+    padding: 10px 20px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    background-color: #333;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+#aplicar-filtros:hover {
+    background-color: #555;
+}
+
+#aplicar-filtros:focus-visible {
+    outline: 2px solid #222;
+    outline-offset: 3px;
+}
+
+/*REsponsividade */
+
+@media (max-width: 760px) {
+    .filtros {
+        grid-template-columns: 1fr;
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .filtros h2,
+    #aplicar-filtros {
+        grid-column: auto;
+    }
+
+    #aplicar-filtros {
+        justify-self: stretch;
+    }
+}

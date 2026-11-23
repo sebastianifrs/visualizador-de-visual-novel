@@ -1,28 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sebastian MM' Hoff">
-    <title>Analises - Visualizador de Visual Novels</title>
+    <title>Análises - Visualizador de Visual Novels</title>
     <link rel="shortcut icon" href="../image/icovvn.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/analises.css">
 </head>
 <body>
     <header>
-        <div class = "titulo-header">
-            <img class="imagem-header" src="../image/fotovvn.png" name="Logo da VVN" width="64" height="64">
-            <h1 class = "textoTitulo-header"><b>Visualizador de Visual Novels</b></h1> 
+        <div class="titulo-header">
+            <img class="imagem-header" src="../image/fotovvn.png" alt="Logo do Visualizador de Visual Novels" width="56" height="56">
+            <h1 class="textoTitulo-header">Visualizador de Visual Novels</h1>
         </div>
-        
 
-        <div class = "botoes-header">
-            <h3 class = "botao-header"><a href="../index.html">Casa</a></h3>
-            <h3 class = "botao-header"><a href="analises.html">Análises</a></h3>
-            <h3 class = "botao-header"><a href="contato.html">Contato</a></h3>
-        </div>
-        <hr class = "hr-sobheader">
-
+        <nav class="nav-header" aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Casa</a></li>
+                <li><a href="analises.html" aria-current="page">Análises</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
     </header>
+    <hr class="hr-sobheader">
+
+    <main>
+
+    <!-- Filtros -->
+        <section class="filtros">
+            <h2>Filtrar Visual Novels</h2>
+
+            <div class="filtro-genero">
+                <h3>Gênero</h3>
+                <div id="generos-container"></div>
+            </div>
+
+            <div class="filtro-letra">
+                <h3>Letra inicial</h3>
+                <div id="letras-container"></div>
+            </div>
+
+            <div class="filtro-estudio">
+                <h3>Estúdio</h3>
+                <div id="estudios-container"></div>
+            </div>
+
+            <div class="filtro-adulto">
+                <h3>Conteúdo adulto</h3>
+
+                <label> <input type="radio" name="adulto" value="todos" checked>Todos </label>
+                <label> <input type="radio" name="adulto" value="sim">Sim </label>
+                <label> <input type="radio" name="adulto" value="nao">Não </label>
+            </div>
+
+            <button type="button" id="aplicar-filtros" onclick="aplicarFiltros()">Aplicar filtros</button>
+
+        </section>
+
+
+
+
+        <!-- Catálogo -->
+        <section class="catalogo">
+            <h2>Visual Novels</h2>
+
+            <div id="catalogo-container">
+                <!-- JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <hr class="hr-sobheader">
+    <footer>
+        <center>
+            <p>© Sebastian MM' Hoff 2026</p>
+        </center>
+    </footer> <!--Colocar o o copyright-->
+
+    <script src="../script/visualnovels.js"></script>
+    <script src="../script/analises.js"></script>
+    <script src="../script/script.js"></script>
 </body>
 </html>
