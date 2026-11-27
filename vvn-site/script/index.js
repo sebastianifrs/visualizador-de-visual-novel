@@ -16,7 +16,7 @@ function preencherCard(vn, id) {
     const card = document.getElementById(id);
     const link = card.parentElement;
 
-    link.href = vn.pagina;
+    link.href = "."+vn.pagina;
 
     const imagem = card.querySelector("img");
     imagem.src = "./"+vn.imagem;

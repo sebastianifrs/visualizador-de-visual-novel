@@ -23,7 +23,7 @@ const visualNovels = [
         adulto: true,
         
         imagem: "/image/subahibi.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/subarashiki-hibi.html",
 
         nota: 9,
         data_analise: "2026-11-10"
@@ -37,7 +37,7 @@ const visualNovels = [
         adulto: false,
         
         imagem: "/image/atrimdm.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/atri-my-dear-moments.html",
 
         nota: 10,
         data_analise: "2026-10-23"
@@ -51,7 +51,7 @@ const visualNovels = [
         adulto: true,
         
         imagem: "/image/gurizaia.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/gurizaia-no-kajitsu.html",
 
         nota: 7,
         data_analise: "2026-11-07"
@@ -65,7 +65,7 @@ const visualNovels = [
         adulto: true,
         
         imagem: "/image/ddlc.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/doki-doki-literature-club.html",
 
         nota: 9,
         data_analise: "2026-11-11"
@@ -79,7 +79,7 @@ const visualNovels = [
         adulto: false,
         
         imagem: "/image/if-my-heart-had-wings.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/if-my-heart-had-wings.html",
 
         nota: 9,
         data_analise: "2026-11-16"
@@ -93,7 +93,7 @@ const visualNovels = [
         adulto: false,
         
         imagem: "/image/airvn.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/air.html",
 
         nota: 10,
         data_analise: "2026-11-16"
@@ -107,7 +107,7 @@ const visualNovels = [
         adulto: true,
         
         imagem: "/image/higurashich1.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/higurashi-no-naku-koro-ni-onikakushi-hen.html",
 
         nota: 8,
         data_analise: "2026-12-01"
@@ -121,7 +121,7 @@ const visualNovels = [
         adulto: false,
         
         imagem: "/image/steambotbt.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/steambot-chronicles-battle-tournament.html",
 
         nota: 6,
         data_analise: "2026-12-06"
@@ -135,7 +135,7 @@ const visualNovels = [
         adulto: true,
         
         imagem: "/image/yosuganosora.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/yosuga-no-sora.html",
 
         nota: 5,
         data_analise: "2026-11-06"
@@ -149,23 +149,51 @@ const visualNovels = [
         adulto: true,
         
         imagem: "/image/schooldayshq.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/school-days.html",
 
         nota: 8,
         data_analise: "2026-10-10"
     },
     {   // Koibito-Chan Demo
-        id: "koibito-chan-demo",
-        titulo: "Koibito-chan (Demo)",
+        id: "saigo-no-hi",
+        titulo: "Saigo no Hi",
         generos: ["Romance", "Psicológico"],
         desenvolvedor: ["Miller", "miller"],
         ano_publicacao: 2026,
         adulto: true,
         
         imagem: "/image/astolfotemplate.png",
-        pagina: "/reviews/subarashiki-hibi.html",
+        pagina: "/page/reviews/saigo-no-hi.html",
 
         nota: 3,
         data_analise: "2026-9-03"
+    },
+    {   // cocoro
+        id: "cocoro",
+        titulo: "Cocoro",
+        generos: ["Romance", "drama"],
+        desenvolvedor: ["Frontwing", "frontwing"],
+        ano_publicacao: 2026,
+        adulto: false,
+        
+        imagem: "/image/cocoro.png",
+        pagina: "/page/reviews/cocoro.html",
+
+        nota: 7,
+        data_analise: "2027-02-11"
+    },
+    {   // GINKA
+        id: "ginka",
+        titulo: "GINKA",
+        generos: ["Romance", "drama"],
+        desenvolvedor: ["Frontwing", "frontwing"],
+        ano_publicacao: 2026,
+        adulto: false,
+        
+        imagem: "/image/ginka.png",
+        pagina: "/page/reviews/ginka.html",
+
+        nota: 8,
+        data_analise: "2027-01-26"
     }
 ];

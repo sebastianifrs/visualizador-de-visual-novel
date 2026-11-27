@@ -11,10 +11,7 @@
 */
 
 
-// ==========================================
 // FILTROS
-// ==========================================
-
 
 // Gera as opções de gênero
 function carregarGeneros() {
@@ -132,9 +129,7 @@ function iniciarFiltros() {
 }
 
 
-// ==========================================
 // CATÁLOGO
-// ==========================================
 
 
 // Gera as estrelas de acordo com a nota
@@ -153,27 +148,25 @@ function gerarEstrelas(nota) {
 // Cria um card de Visual Novel
 function criarCard(vn) {
 
-    // Cria o link
+    
     const link = document.createElement("a");
-    link.href = vn.pagina;
+    link.href = ".."+vn.pagina; // Cria o link
 
-    // Cria a div interna
-    const card = document.createElement("div");
+    
+    const card = document.createElement("div"); // Cria a div interna
 
-    // Cria a imagem
-    const imagem = document.createElement("img");
+    
+    const imagem = document.createElement("img"); // cria a imagem
     imagem.src = "../"+vn.imagem;
     imagem.alt = "Capa de " + vn.titulo;
 
-    // Cria o título
-    const titulo = document.createElement("h4");
+    const titulo = document.createElement("h4"); // cia o título
     titulo.textContent = vn.titulo;
 
-    // Cria as estrelas
-    const nota = document.createElement("h5");
+    const nota = document.createElement("h5"); // Estrelas
     nota.textContent = gerarEstrelas(vn.nota);
 
-    // Monta a estrutura
+    // Montar o card
     card.appendChild(imagem);
     card.appendChild(titulo);
     card.appendChild(nota);
